@@ -3,12 +3,19 @@ import java.util.Scanner;
 
 public class Firstassignment {
 	public static void main (String[] args) {
-		System.out.println("Enter a number between 1-100");
-		System.out.println("or type \"Quit\" to exit");
-		parseInput();
+		System.out.println("Enter a number between 1-100 that you would like factored,");
+		System.out.println("or type \"Quit\" to exit.");
+		int userInput = parseInput();
+		if(userInput != 0){
+		factor(userInput);
+		}
 	}
 
-	public int factor(){
+	public static int factor(int userInput){
+		//how the hell do I make the computer factor for me?
+		
+		
+		
 		return 1;
 	}
 	
@@ -18,7 +25,12 @@ public class Firstassignment {
 		String otherInput;
 		if(console.hasNextInt()){
 			numberInput = console.nextInt();
-			return numberInput;
+			if(numberInput >= 1 && numberInput <= 100){
+				return numberInput;
+			}else{
+				System.out.println("That number isn't within an acceptable range - it must be between 1 and 100.");
+				parseInput();
+			}
 		}
 		else{
 			otherInput = console.next();
@@ -26,9 +38,12 @@ public class Firstassignment {
 			if (otherInput.equals("quit")){
 				System.out.println("Have a nice day.");
 				return 0;
+			}else {
+				System.out.println("" + otherInput + " is not valid input. Please enter a number between 1-100.");
+				parseInput();
 			}
 			
 		}
+		return 0;
 	}
 }
-//com
