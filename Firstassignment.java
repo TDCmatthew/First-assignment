@@ -7,17 +7,19 @@ public class Firstassignment {
 		System.out.println("Enter a number between 1-100 that you would like factored,");
 		System.out.println("or type \"Quit\" to exit.");
 		parseInput();
-		if (NUMBERDAMNIT != 0) {
+		System.out.println("well, shit");
+		System.out.println(NUMBERDAMNIT);
 			factor();
-		}
+			System.out.println("well, shit");
 	}
 
 	public static void factor() {
-		ArrayList<Integer> factors = new ArrayList<Integer>();
-		factors.add(NUMBERDAMNIT);
-		factors.add(1);
-
-		System.out.println(factors.size());
+		System.out.println(1 + "" + NUMBERDAMNIT);
+		for (double i = NUMBERDAMNIT/2; i >= 2; i --){
+			if ((int)(NUMBERDAMNIT/i) * i == NUMBERDAMNIT){
+				System.out.println((int)i + " and " + (int)(NUMBERDAMNIT/i));
+			}
+		}
 	}
 
 	public static int parseInput() {
@@ -28,6 +30,7 @@ public class Firstassignment {
 			numberInput = console.nextInt();
 			if (numberInput >= 1 && numberInput <= 100) {
 				NUMBERDAMNIT += numberInput;
+				System.out.println("well, shit");
 				return numberInput;
 			} else {
 				System.out.println("That number isn't within an acceptable range - it must be between 1 and 100.");

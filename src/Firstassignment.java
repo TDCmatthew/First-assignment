@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Firstassignment {
@@ -7,17 +6,16 @@ public class Firstassignment {
 		System.out.println("Enter a number between 1-100 that you would like factored,");
 		System.out.println("or type \"Quit\" to exit.");
 		parseInput();
-		if (NUMBERDAMNIT != 0) {
 			factor();
-		}
 	}
 
 	public static void factor() {
-		ArrayList<Integer> factors = new ArrayList<Integer>();
-		factors.add(NUMBERDAMNIT);
-		factors.add(1);
-
-		System.out.println(factors.size());
+		System.out.println(1 + " and " + NUMBERDAMNIT);
+		for(double i = NUMBERDAMNIT/2; i >= 2; i--){
+			if((int)(NUMBERDAMNIT/i) * i == NUMBERDAMNIT){
+				System.out.println((int)i + " and " + (int)(NUMBERDAMNIT/i));
+			}
+		}
 	}
 
 	public static int parseInput() {
