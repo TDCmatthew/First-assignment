@@ -10,9 +10,8 @@ public class Firstassignment {
 	}
 
 	public static void factor() {
-		System.out.println(1 + " and " + NUMBERDAMNIT);
-		for(double i = NUMBERDAMNIT/2; i >= 2; i--){
-			if((int)(NUMBERDAMNIT/i) * i == NUMBERDAMNIT){
+		for(double i = NUMBERDAMNIT/2; i >= 1; i--){
+			if((int)(NUMBERDAMNIT/i) * i == NUMBERDAMNIT  && i < NUMBERDAMNIT/i){
 				System.out.println((int)i + " and " + (int)(NUMBERDAMNIT/i));
 			}
 		}
